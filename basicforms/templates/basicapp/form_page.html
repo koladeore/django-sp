@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static "bootsrap/css/bootstrap.min.css" %}"/>
+    <title>form</title>
+  </head>
+  <body>
+    <h1>fill out the form!</h1>
+    <div class="container">
+      <form method="POST">
+          {{form.as_p}}
+          {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>
